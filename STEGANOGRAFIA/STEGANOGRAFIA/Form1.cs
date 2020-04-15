@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace STEGANOGRAFIA
+namespace steganografia
 {
-    public partial class Form1 : Form
+    public partial class Steganografia : Form
     {
-        public Form1()
+
+        string percorso = string.Empty;
+        Bitmap img;
+        public Steganografia()
         {
             InitializeComponent();
         }
+
     }
 }
+            
+
+        
