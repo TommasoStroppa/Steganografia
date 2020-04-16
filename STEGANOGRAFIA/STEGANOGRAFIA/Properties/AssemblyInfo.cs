@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Le informazioni generali relative a un assembly sono controllate dal seguente 
 // set di attributi. Modificare i valori di questi attributi per modificare le informazioni
 // associate a un assembly.
-[assembly: AssemblyTitle("STEGANOGRAFIA")]
+[assembly: AssemblyTitle("Steganografia")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("STEGANOGRAFIA")]
+[assembly: AssemblyProduct("Steganografia")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Se il progetto viene esposto a COM, il GUID seguente verrà utilizzato come ID della libreria dei tipi
-[assembly: Guid("99c6ce48-339f-4337-adf6-c300ed06b8ef")]
+[assembly: Guid("427f906f-a323-4990-8e9d-d032bbb650d7")]
 
 // Le informazioni sulla versione di un assembly sono costituite dai seguenti quattro valori:
 //
