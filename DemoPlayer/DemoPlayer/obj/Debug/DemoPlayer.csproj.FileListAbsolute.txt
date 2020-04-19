@@ -1,0 +1,14 @@
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\DemoPlayer.exe.config
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\DemoPlayer.exe
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\DemoPlayer.pdb
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\MetroFramework.Design.dll
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\MetroFramework.dll
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.csprojAssemblyReference.cache
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.Form1.resources
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.Properties.Resources.resources
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.csproj.GenerateResource.cache
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.csproj.CoreCompileInputs.cache
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.csproj.CopyComplete
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.exe
+C:\Users\brozz\Desktop\pcto\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.pdb
