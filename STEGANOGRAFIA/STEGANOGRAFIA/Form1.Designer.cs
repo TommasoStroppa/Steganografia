@@ -35,13 +35,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.leggi = new System.Windows.Forms.Button();
             this.testo_letto = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.salva = new System.Windows.Forms.Button();
             this.seleziona_file = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.immagine)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // immagine
@@ -50,6 +47,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.immagine.BackColor = System.Drawing.Color.Lime;
+            this.immagine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.immagine.Location = new System.Drawing.Point(12, 12);
             this.immagine.Name = "immagine";
             this.immagine.Size = new System.Drawing.Size(773, 308);
@@ -79,6 +77,7 @@
             this.scrivi.TabIndex = 4;
             this.scrivi.Text = "SCRIVI";
             this.scrivi.UseVisualStyleBackColor = true;
+            this.scrivi.Click += new System.EventHandler(this.scrivi_Click);
             // 
             // testo
             // 
@@ -122,28 +121,6 @@
             this.testo_letto.Size = new System.Drawing.Size(232, 29);
             this.testo_letto.TabIndex = 2;
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.panel3.Controls.Add(this.salva);
-            this.panel3.Location = new System.Drawing.Point(320, 387);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(164, 51);
-            this.panel3.TabIndex = 12;
-            this.panel3.Visible = false;
-            // 
-            // salva
-            // 
-            this.salva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salva.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Bold);
-            this.salva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.salva.Location = new System.Drawing.Point(3, 3);
-            this.salva.Name = "salva";
-            this.salva.Size = new System.Drawing.Size(158, 36);
-            this.salva.TabIndex = 10;
-            this.salva.Text = "SALVA";
-            this.salva.UseVisualStyleBackColor = true;
-            // 
             // seleziona_file
             // 
             this.seleziona_file.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -165,18 +142,16 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.seleziona_file);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.immagine);
             this.Name = "Form1";
-            this.Text = "STEGANOGRAFIA";
+            this.Text = "HIDE YOUR DATA";
             ((System.ComponentModel.ISupportInitialize)(this.immagine)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -190,8 +165,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button leggi;
         private System.Windows.Forms.TextBox testo_letto;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button salva;
         private System.Windows.Forms.Button seleziona_file;
     }
 }
