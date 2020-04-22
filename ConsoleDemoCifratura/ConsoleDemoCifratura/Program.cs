@@ -12,27 +12,27 @@ namespace ConsoleDemoCifratura
         {
             Console.WriteLine("Demo cifratura di una stringa qualsiasi tramite password");
 
-            Console.Write("Stringa da cifrare:");
+            Console.Write("\nStringa da cifrare:");
             string strEncryprion=Console.ReadLine();
 
-            Console.Write("Passord:");
+            Console.Write("Password:");
             string pswd = Console.ReadLine();
 
             string strEncrypted=CifraturaDLL.Crypto.AESEncryption(strEncryprion, pswd);
 
-            Console.Write("Stringa cifrata:");
+            Console.Write("\nStringa cifrata:");
             Console.WriteLine(strEncrypted);
 
-            Console.Write("Password:");
+            Console.Write("\nPassword:");
             string pswdn = Console.ReadLine();
 
             try
             {
                 string strDecrypted = CifraturaDLL.Crypto.AESDecryption(strEncrypted, pswdn);
-                Console.Write("Stringa decifrata:");
+                Console.Write("\nStringa decifrata:");
                 Console.WriteLine(strDecrypted);
 
-                Console.Write("Premi un tasto per continuare...");
+                Console.Write("\nPremi un tasto per continuare...");
                 Console.ReadKey();
             }
             catch
