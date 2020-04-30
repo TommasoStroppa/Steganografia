@@ -38,30 +38,70 @@ namespace Steganografia
 
         private void scrivi_Click(object sender, EventArgs e)
         {
+            string messaggio = string.Empty;
+            string da_inserire = testo.Text + "\0";
+            foreach (char c in da_inserire)
+            {
+                string ottetto = Convert.ToString(c, 2);
+
+                while (ottetto.Length < 8)
+                {
+                    ottetto = "0" + ottetto;
+                }
+                messaggio = messaggio + ottetto;
+            }
+
             img = new Bitmap(immagine.Image);
 
             int larghezza = img.Width;
             int altezza = img.Height;
-
-            for (int y = 0; y < larghezza; y++)
+            int ncaratteri = (larghezza * altezza);
+            if (ncaratteri >= messaggio.Length)
             {
-                for (int x = 0; x < altezza; x++)
+                for (int y = 0; y < altezza; y++)
                 {
-                    Color colore = img.GetPixel(y, x);
-                    if (y < 1 && x < testo.TextLength)
+                    for (int x = 0; x < larghezza; x++)
                     {
-                        Console.WriteLine("R = [" + y + "][" + x + "] = " + colore.R);
-                        Console.WriteLine("G = [" + y + "][" + x + "] = " + colore.G);
-                        Console.WriteLine("B = [" + y + "][" + x + "] = " + colore.B);
+                        int posizione = larghezza * y + x;
 
-                        char letter = Convert.ToChar(testo.Text.Substring(x, 1));
-                        int valore = Convert.ToInt32(letter);
+                        if (posizione < messaggio.Length)
+                        {
+                            Color colore = img.GetPixel(x, y);
+                            int n = colore.R;
+                            int[] a = new int[8];
 
-                        Console.WriteLine("lettera: " + letter + " valore: " + valore);
+                            for (int i = 0; n > 0; i++)
+                            {
+                                a[i] = n % 2;
+                                n = n / 2;
+                            }
 
-                        img.SetPixel(y, x, Color.FromArgb(colore.R, colore.G, valore));
+                            string test = string.Empty;
+
+                            for (int i = a.Length - 1; i > 0; i--)
+                            {
+                                test = test + a[i].ToString();
+                            }
+
+                            test = test + messaggio[posizione];
+
+                            int R = Convert.ToInt32(test, 2);
+
+                            int A = colore.A;
+                            int G = colore.G;
+                            int B = colore.B;
+                            img.SetPixel(x, y, Color.FromArgb(A, R, G, B));
+                        }
                     }
                 }
+
+                immagine.Image = img;
+                testo.Text = "";
+                
+            }
+            else
+            {
+                MessageBox.Show("stringa troppo lunga, la massima lunghezza è " + (ncaratteri / 8 - 1).ToString() + " caratteri");
             }
 
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
@@ -77,6 +117,59 @@ namespace Steganografia
             {
                 img.Save(saveFileDialog1.FileName);
             }
+        }
+
+        private void leggi_Click(object sender, EventArgs e)
+        {
+            img = new Bitmap(immagine.Image);
+            string carattere = string.Empty;
+            int larghezza = img.Width;
+            int altezza = img.Height;
+            string tutto = string.Empty;
+
+            for (int y = 0; y < altezza; y++)
+            {
+                for (int x = 0; x < larghezza; x++)
+                {
+
+                    int posizione = larghezza * y + x;
+
+                    if (carattere != "00000000")
+                    {
+
+                        if (posizione % 8 == 0)
+                        {
+                            carattere = "";
+                        }
+
+                        Color colore = img.GetPixel(x, y);
+                        int n = colore.R;
+
+                        int[] a = new int[8];
+
+                        for (int z = 0; n > 0; z++)
+                        {
+                            a[z] = n % 2;
+                            n = n / 2;
+                        }
+
+                        carattere = carattere + a[0].ToString();
+                        tutto = tutto + a[0].ToString();
+
+                    }
+                }
+            }
+
+            string risultato = "";
+            while (tutto.Length > 0)
+            {
+                var first8 = tutto.Substring(0, 8);
+                tutto = tutto.Substring(8);
+                var num = Convert.ToInt32(first8, 2);
+                risultato = risultato + (char)num;
+            }
+            testo_letto.Text = risultato;
+
         }
     }
 

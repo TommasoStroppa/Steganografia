@@ -110,6 +110,7 @@
             this.leggi.TabIndex = 5;
             this.leggi.Text = "LEGGI";
             this.leggi.UseVisualStyleBackColor = true;
+            this.leggi.Click += new System.EventHandler(this.leggi_Click);
             // 
             // testo_letto
             // 
