@@ -94,10 +94,8 @@ namespace Steganografia
                         }
                     }
                 }
-
                 immagine.Image = img;
                 testo.Text = "";
-                
             }
             else
             {
@@ -118,61 +116,7 @@ namespace Steganografia
                 img.Save(saveFileDialog1.FileName);
             }
         }
-
-        private void leggi_Click(object sender, EventArgs e)
-        {
-            img = new Bitmap(immagine.Image);
-            string carattere = string.Empty;
-            int larghezza = img.Width;
-            int altezza = img.Height;
-            string tutto = string.Empty;
-
-            for (int y = 0; y < altezza; y++)
-            {
-                for (int x = 0; x < larghezza; x++)
-                {
-
-                    int posizione = larghezza * y + x;
-
-                    if (carattere != "00000000")
-                    {
-
-                        if (posizione % 8 == 0)
-                        {
-                            carattere = "";
-                        }
-
-                        Color colore = img.GetPixel(x, y);
-                        int n = colore.R;
-
-                        int[] a = new int[8];
-
-                        for (int z = 0; n > 0; z++)
-                        {
-                            a[z] = n % 2;
-                            n = n / 2;
-                        }
-
-                        carattere = carattere + a[0].ToString();
-                        tutto = tutto + a[0].ToString();
-
-                    }
-                }
-            }
-
-            string risultato = "";
-            while (tutto.Length > 0)
-            {
-                var first8 = tutto.Substring(0, 8);
-                tutto = tutto.Substring(8);
-                var num = Convert.ToInt32(first8, 2);
-                risultato = risultato + (char)num;
-            }
-            testo_letto.Text = risultato;
-
-        }
     }
-
 }
 
        
