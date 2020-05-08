@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace STEGANOGRAFIA.Properties
+namespace Steganografia.Properties
 {
 
 
