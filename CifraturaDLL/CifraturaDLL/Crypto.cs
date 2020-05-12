@@ -6,33 +6,31 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.IO;
 
-//fonte:https://github.com/Digiex/MCLauncher.NET/blob/master/MCLauncher.net/Crypto.cs
-
 namespace CifraturaDLL
 {
     public class Crypto
     {
         private static byte[] _salt = Encoding.ASCII.GetBytes("jasdh7834y8hfeur73rsharks214");
 
-        public static string AESEncryption(string plainText, string password)
+        public static string CifraturaAES(string testoOriginale, string password)
         {
-            if (string.IsNullOrEmpty(plainText))
+            if (string.IsNullOrEmpty(testoOriginale))
                 throw new ArgumentNullException("plain text");
             if (string.IsNullOrEmpty(password))
                 throw new ArgumentNullException("password");
 
-            string cipherText = null;
-            Rijndael aesAlg = null;
+            string testoCifrato = null;
+            Rijndael algAES = null;
 
             try
             {
                 Rfc2898DeriveBytes key = new Rfc2898DeriveBytes(password, _salt);
 
-                aesAlg = new RijndaelManaged();
-                aesAlg.Key = key.GetBytes(aesAlg.KeySize / 8);
-                aesAlg.IV = key.GetBytes(aesAlg.BlockSize / 8);
+                algAES = new RijndaelManaged();
+                algAES.Key = key.GetBytes(algAES.KeySize / 8);
+                algAES.IV = key.GetBytes(algAES.BlockSize / 8);
 
-                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+                ICryptoTransform encryptor = algAES.CreateEncryptor(algAES.Key, algAES.IV);
 
                 using (MemoryStream msEncrypt = new MemoryStream())
                 {
@@ -40,41 +38,40 @@ namespace CifraturaDLL
                     {
                         using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
                         {
-                            swEncrypt.Write(plainText);
+                            swEncrypt.Write(testoOriginale);
                         }
                     }
-                    cipherText = Convert.ToBase64String(msEncrypt.ToArray());
+                    testoCifrato = Convert.ToBase64String(msEncrypt.ToArray());
                 }
             }
             finally
             {
-                if (aesAlg != null)
-                    aesAlg.Clear();
+                if (algAES != null)
+                    algAES.Clear();
             }
-            return cipherText;
+            return testoCifrato;
         }
-
-        public static string AESDecryption(string cipherText, string password)
+        public static string DecifraturaAES(string testoCifrato, string password)
         {
-            if (string.IsNullOrEmpty(cipherText))
-                throw new ArgumentNullException("cipher text");
+            if (string.IsNullOrEmpty(testoCifrato))
+                throw new ArgumentNullException("testo cifrato");
             if (string.IsNullOrEmpty(password))
                 throw new ArgumentNullException("password");
 
-            string plainText = null;
-            Rijndael aesAlg = null;
+            string testoOriginale = null;
+            Rijndael algAES = null;
 
             try
             {
                 Rfc2898DeriveBytes key = new Rfc2898DeriveBytes(password, _salt);
 
-                aesAlg = new RijndaelManaged();
-                aesAlg.Key = key.GetBytes(aesAlg.KeySize / 8);
-                aesAlg.IV = key.GetBytes(aesAlg.BlockSize / 8);
+                algAES = new RijndaelManaged();
+                algAES.Key = key.GetBytes(algAES.KeySize / 8);
+                algAES.IV = key.GetBytes(algAES.BlockSize / 8);
 
-                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+                ICryptoTransform decryptor = algAES.CreateDecryptor(algAES.Key, algAES.IV);
 
-                byte[] bytes = Convert.FromBase64String(cipherText);
+                byte[] bytes = Convert.FromBase64String(testoCifrato);
 
                 using (MemoryStream msDecrypt = new MemoryStream(bytes))
                 {
@@ -82,17 +79,17 @@ namespace CifraturaDLL
                     {
                         using (StreamReader srDecrypt = new StreamReader(csDecrypt))
                         {
-                            plainText = srDecrypt.ReadToEnd();
+                            testoOriginale = srDecrypt.ReadToEnd();
                         }
                     }
                 }
             }
             finally
             {
-                if (aesAlg != null)
-                    aesAlg.Clear();
+                if (algAES != null)
+                    algAES.Clear();
             }
-            return plainText;
+            return testoOriginale;
         }
     }
 }
