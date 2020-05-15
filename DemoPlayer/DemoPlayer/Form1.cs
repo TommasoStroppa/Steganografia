@@ -60,62 +60,45 @@ namespace DemoPlayer
             }
         }
 
-        
+        //private async void button1_Click(object sender, EventArgs e)
+        //{
+        //    using (FolderBrowserDialog fbd = new FolderBrowserDialog() { Description = "select your path" })
+        //    {
+        //        if (fbd.ShowDialog() == DialogResult.OK)
+        //        {
+        //            var youtube = YouTube.Default;
+        //            var video = await youtube.GetVideoAsync(textBox1.Text);
+        //            var path = fbd.SelectedPath + @"\" + "Thescotts" + ".mp3";
+        //            File.WriteAllBytes(path, await video.GetBytesAsync());
+        //            button1.Text = "complete";
+        //            var nVideo = video.FullName + "mp3";
+
+
+        //        }
+
+        //    }
+        //}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string FileToCopy = null;
+            string NewCopy = null;
+
+            FileToCopy = @"C:\Users\zacca\Desktop\Thescotts.mp3";
+            NewCopy = System.IO.Path.Combine(Application.StartupPath, System.IO.Path.GetFileName(FileToCopy));
+
+
+            if (System.IO.File.Exists(FileToCopy) == true)
+            {
+                System.IO.File.Delete(NewCopy);
+                System.IO.File.Copy(FileToCopy, NewCopy);
+                MessageBox.Show("fatto");
+            }
+        }
+
+
     }
-
-
-    //this.timer1.Start();
-
-    //using (var audioFile = new AudioFileReader("Canzone2.mp3"))
-    //using (var outputDevice = new WaveOutEvent())
-    //{
-    //    outputDevice.Init(audioFile);
-    //    outputDevice.Play();
-    //    while (outputDevice.PlaybackState == PlaybackState.Playing)
-    //    {
-    //        //Thread.Sleep(1000);
-    //    }
-    //}
-
-
-
         
-    
 }
 
 
-//private async void button1_Click(object sender, EventArgs e)
-//{
-//    using (FolderBrowserDialog fbd = new FolderBrowserDialog() { Description = "select your path" })
-//    {
-//        if (fbd.ShowDialog() == DialogResult.OK)
-//        {
-//            var youtube = YouTube.Default;
-//            var video = await youtube.GetVideoAsync(textBox1.Text);
-//            var path = fbd.SelectedPath + @"\" + "Thescotts" + ".mp3";
-//            File.WriteAllBytes(path, await video.GetBytesAsync());
-//            button1.Text = "complete";
-//            var nVideo = video.FullName + "mp3";
-
-
-//        }
-
-//    }
-//}
-
-//private void button2_Click(object sender, EventArgs e)
-//{
-//    string FileToCopy = null;
-//    string NewCopy = null;
-
-//    FileToCopy = @"C:\Users\zacca\Desktop\Thescotts.mp3";
-//    NewCopy = System.IO.Path.Combine(Application.StartupPath, System.IO.Path.GetFileName(FileToCopy));
-
-
-//    if (System.IO.File.Exists(FileToCopy) == true)
-//    {
-//        System.IO.File.Delete(NewCopy);
-//        System.IO.File.Copy(FileToCopy, NewCopy);
-//        MessageBox.Show("fatto");
-//    }
-//}
