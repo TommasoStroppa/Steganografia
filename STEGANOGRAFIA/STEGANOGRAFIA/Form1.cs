@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CifraturaDLL;
 
 namespace Steganografia
 {
@@ -32,14 +33,21 @@ namespace Steganografia
                 percorso = openFileDialog1.FileName;
                 immagine.ImageLocation = percorso;
                 panel1.Visible = true;
-                panel2.Visible = true;
             }
         }
 
         private void scrivi_Click(object sender, EventArgs e)
         {
             string messaggio = string.Empty;
-            string da_inserire = testo.Text + "\0";
+            string da_inserire0 = testo.Text;
+            if(string.IsNullOrEmpty(da_inserire0) || string.IsNullOrEmpty(password.Text))
+            {
+                MessageBox.Show("Inserire sia il testo che la password...");
+                return;
+            }
+            string da_inserire = default(string);
+            da_inserire=Crypto.AESEncryption(da_inserire0, password.Text);
+
             foreach (char c in da_inserire)
             {
                 string ottetto = Convert.ToString(c, 2);
@@ -116,6 +124,7 @@ namespace Steganografia
                 img.Save(saveFileDialog1.FileName);
             }
         }
+        
     }
 }
 

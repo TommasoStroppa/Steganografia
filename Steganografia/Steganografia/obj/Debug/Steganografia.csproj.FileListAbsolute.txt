@@ -18,3 +18,16 @@ C:\Users\Asus\Documents\GitHub\Steganografia\Steganografia\Steganografia\obj\Deb
 C:\Users\Asus\Documents\GitHub\Steganografia\Steganografia\Steganografia\obj\Debug\Steganografia.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Documents\GitHub\Steganografia\Steganografia\Steganografia\obj\Debug\Steganografia.exe
 C:\Users\Asus\Documents\GitHub\Steganografia\Steganografia\Steganografia\obj\Debug\Steganografia.pdb
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\bin\Debug\Steganografia.exe.config
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\bin\Debug\Steganografia.exe
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\bin\Debug\Steganografia.pdb
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\bin\Debug\CifraturaDLL.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\bin\Debug\CifraturaDLL.pdb
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.csprojAssemblyReference.cache
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.Form1.resources
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.Properties.Resources.resources
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.csproj.GenerateResource.cache
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.csproj.CoreCompileInputs.cache
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.csproj.CopyComplete
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.exe
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.pdb
