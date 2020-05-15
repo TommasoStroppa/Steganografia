@@ -1,0 +1,10 @@
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\ConsoleDemoCifratura\ConsoleDemoCifratura\bin\Debug\ConsoleDemoCifratura.exe.config
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\ConsoleDemoCifratura\ConsoleDemoCifratura\bin\Debug\ConsoleDemoCifratura.exe
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\ConsoleDemoCifratura\ConsoleDemoCifratura\bin\Debug\ConsoleDemoCifratura.pdb
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\ConsoleDemoCifratura\ConsoleDemoCifratura\bin\Debug\CifraturaDLL.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\ConsoleDemoCifratura\ConsoleDemoCifratura\bin\Debug\CifraturaDLL.pdb
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\ConsoleDemoCifratura\ConsoleDemoCifratura\obj\Debug\ConsoleDemoCifratura.csprojAssemblyReference.cache
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\ConsoleDemoCifratura\ConsoleDemoCifratura\obj\Debug\ConsoleDemoCifratura.csproj.CoreCompileInputs.cache
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\ConsoleDemoCifratura\ConsoleDemoCifratura\obj\Debug\ConsoleDemoCifratura.csproj.CopyComplete
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\ConsoleDemoCifratura\ConsoleDemoCifratura\obj\Debug\ConsoleDemoCifratura.exe
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\ConsoleDemoCifratura\ConsoleDemoCifratura\obj\Debug\ConsoleDemoCifratura.pdb
