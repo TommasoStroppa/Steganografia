@@ -24,8 +24,7 @@ namespace DemoPlayer
 
             Server s = new Server("127.0.0.1", 50000, false, DefaultRoute);
 
-            s.DynamicRoutes.Add(HttpMethod.GET, new Regex("^/audio/(.*?)/?$"), audioRoute);
-        }
+            s.DynamicRoutes.Add(HttpMethod.GET, new Regex("^/audio/(.*?)/?$"), audioRoute);       }
 
         static async Task DefaultRoute(HttpContext ctx)
         {
@@ -60,6 +59,8 @@ namespace DemoPlayer
                 }
             }
         }
+
+        
     }
 
 
