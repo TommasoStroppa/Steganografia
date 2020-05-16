@@ -26,7 +26,8 @@ namespace DemoPlayer
 
             Server s = new Server("127.0.0.1", 50000, false, DefaultRoute);
 
-            s.DynamicRoutes.Add(HttpMethod.GET, new Regex("^/audio/(.*?)/?$"), audioRoute);       }
+            s.DynamicRoutes.Add(HttpMethod.GET, new Regex("^/audio/(.*?)/?$"), audioRoute);
+        }
 
         string percorso = string.Empty;
         Bitmap img;
@@ -34,7 +35,7 @@ namespace DemoPlayer
         static async Task DefaultRoute(HttpContext ctx)
         {
             ctx.Response.StatusCode = 200;
-            var audio = System.IO.File.ReadAllBytes("YouTube.mp3");
+            var audio = System.IO.File.ReadAllBytes("Scegli file");
             await ctx.Response.Send(audio);
         }
 
@@ -43,51 +44,33 @@ namespace DemoPlayer
             var audioName = (ctx.Request.RawUrlEntries[1] ?? "noaudio") + ".mp3";
 
             if (!System.IO.File.Exists(audioName))
-                audioName = "noaudio.mp3";
+            {
+                audioName = "noaudio.jpg";
+                MessageBox.Show("Audio non trovato!");
+            }
 
             ctx.Response.StatusCode = 200;
             var audio = System.IO.File.ReadAllBytes(audioName);
             await ctx.Response.Send(audio);
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //using (var client = new WebClient())
-            //{
-            //    client.DownloadFile("https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.like-agency.it%2Fblog-like%2Fitem%2F72-colori-e-marketing-come-creare-l-immagine-coordinata-perfetta&psig=AOvVaw0vEzE9NhX7ZTdj3rmAna97&ust=1589635366180000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCICL_K37tekCFQAAAAAdAAAAABAD", "audio.jpg");
-            //}
-
-            
-                string fileName = label4.Text;
-            using (var audioFile = new MediaFoundationReader(fileName))
-            using (var outputDevice = new WaveOutEvent())
-            {
-                outputDevice.Init(audioFile);
-                outputDevice.Play();
-                while (outputDevice.PlaybackState == PlaybackState.Playing)
-                {
-                    Thread.Sleep(1000);
-                }
-            }
-        }
-
        
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            string FileToCopy = null;
-            string NewCopy = null;
-
-            FileToCopy = @"C:\Users\computer\Desktop\Thescotts.mp3";
-            NewCopy = System.IO.Path.Combine(Application.StartupPath, System.IO.Path.GetFileName(FileToCopy));
-
-
-            if (System.IO.File.Exists(FileToCopy) == true)
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Multiselect = false;
+            openFileDialog1.Filter = "Bitmap Image (.bmp)|*.bmp";
+            openFileDialog1.InitialDirectory = @"C:\Users\computer\Desktop\";
+            openFileDialog1.Title = "Seleziona immagine BMP";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                System.IO.File.Delete(NewCopy);
-                System.IO.File.Copy(FileToCopy, NewCopy);
-                MessageBox.Show("fatto");
+                percorso = openFileDialog1.FileName;
+                immagine.ImageLocation = percorso;
             }
+            textBox1.Visible = true;
+            textBox2.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
+            
         }
 
         private void btnLeggi_Click(object sender, EventArgs e)
@@ -126,7 +109,6 @@ namespace DemoPlayer
 
                         carattere = carattere + a[0].ToString();
                         tutto = tutto + a[0].ToString();
-
                     }
                 }
             }
@@ -169,20 +151,38 @@ namespace DemoPlayer
             {
                 label4.Text = ($"{word}");
             }
+            textBox3.Visible = true;
+            label5.Visible = true;
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Multiselect = false;
-            openFileDialog1.Filter = "Bitmap Image (.bmp)|*.bmp";
-            openFileDialog1.InitialDirectory = @"C:\Users\computer\Desktop\";
-            openFileDialog1.Title = "Seleziona immagine BMP";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            var link = label4.Text;
+            var nomeF = textBox3.Text;
+            using (var client = new WebClient())
             {
-                percorso = openFileDialog1.FileName;
-                immagine.ImageLocation = percorso;
+                client.DownloadFile("http://127.0.0.1:50000/audio/" +link, nomeF+ " .mp3");
             }
+                string fileName = nomeF+" .mp3";
+                using (var audioFile = new MediaFoundationReader(fileName))
+                using (var outputDevice = new WaveOutEvent())
+                {
+                    outputDevice.Init(audioFile);
+                    outputDevice.Play();
+                    while (outputDevice.PlaybackState == PlaybackState.Playing)
+                    {
+                        Thread.Sleep(1000);
+                    }
+                }
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            textBox1.Visible = false;
+            textBox2.Visible = false;
+            textBox3.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label5.Visible = false;
         }
     }
         
