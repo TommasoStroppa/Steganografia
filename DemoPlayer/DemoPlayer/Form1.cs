@@ -161,9 +161,9 @@ namespace DemoPlayer
             var nomeF = textBox3.Text;
             using (var client = new WebClient())
             {
-                client.DownloadFile("http://127.0.0.1:50000/audio/" +link, nomeF+ " .mp3");
+                client.DownloadFile("http://127.0.0.1:50000/audio/" +link, nomeF + ".mp3");
             }
-                string fileName = nomeF+" .mp3";
+                string fileName = nomeF + ".mp3";
                 using (var audioFile = new MediaFoundationReader(fileName))
                 using (var outputDevice = new WaveOutEvent())
                 {

@@ -34,3 +34,16 @@ C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia
 C:\Users\Asus\Documents\GitHub\Steganografia\Steganografia\Steganografia\bin\Debug\CifraturaDLL.dll
 C:\Users\Asus\Documents\GitHub\Steganografia\Steganografia\Steganografia\bin\Debug\CifraturaDLL.pdb
 C:\Users\Asus\Documents\GitHub\Steganografia\Steganografia\Steganografia\obj\Debug\Steganografia.csproj.CopyComplete
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\bin\Debug\Steganografia.exe.config
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\bin\Debug\Steganografia.exe
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\bin\Debug\Steganografia.pdb
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\bin\Debug\CifraturaDLL.dll
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\bin\Debug\CifraturaDLL.pdb
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.csprojAssemblyReference.cache
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.Form1.resources
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.Properties.Resources.resources
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.csproj.GenerateResource.cache
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.csproj.CoreCompileInputs.cache
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.csproj.CopyComplete
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.exe
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.pdb
