@@ -79,3 +79,5 @@ C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin
 C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\WatsonWebserver.dll
 C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\Newtonsoft.Json.xml
 >>>>>>> playerMajidBrozzoni
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\CifraturaDLL.dll
+C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\CifraturaDLL.pdb
