@@ -14,6 +14,7 @@ using WatsonWebserver;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Net;
+using CifraturaDLL;
 
 namespace DemoPlayer
 {
@@ -55,7 +56,9 @@ namespace DemoPlayer
             //{
             //    client.DownloadFile("https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.like-agency.it%2Fblog-like%2Fitem%2F72-colori-e-marketing-come-creare-l-immagine-coordinata-perfetta&psig=AOvVaw0vEzE9NhX7ZTdj3rmAna97&ust=1589635366180000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCICL_K37tekCFQAAAAAdAAAAABAD", "audio.jpg");
             //}
-                string fileName = "YouTube.mp3";
+
+            
+                string fileName = label4.Text;
             using (var audioFile = new MediaFoundationReader(fileName))
             using (var outputDevice = new WaveOutEvent())
             {
@@ -68,24 +71,7 @@ namespace DemoPlayer
             }
         }
 
-        //private async void button1_Click(object sender, EventArgs e)
-        //{
-        //    using (FolderBrowserDialog fbd = new FolderBrowserDialog() { Description = "select your path" })
-        //    {
-        //        if (fbd.ShowDialog() == DialogResult.OK)
-        //        {
-        //            var youtube = YouTube.Default;
-        //            var video = await youtube.GetVideoAsync(textBox1.Text);
-        //            var path = fbd.SelectedPath + @"\" + "Thescotts" + ".mp3";
-        //            File.WriteAllBytes(path, await video.GetBytesAsync());
-        //            button1.Text = "complete";
-        //            var nVideo = video.FullName + "mp3";
-
-
-        //        }
-
-        //    }
-        //}
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -106,7 +92,83 @@ namespace DemoPlayer
 
         private void btnLeggi_Click(object sender, EventArgs e)
         {
+            img = new Bitmap(immagine.Image);
+            string carattere = string.Empty;
+            int larghezza = img.Width;
+            int altezza = img.Height;
+            string tutto = string.Empty;
 
+            for (int y = 0; y < altezza; y++)
+            {
+                for (int x = 0; x < larghezza; x++)
+                {
+
+                    int posizione = larghezza * y + x;
+
+                    if (carattere != "00000000")
+                    {
+
+                        if (posizione % 8 == 0)
+                        {
+                            carattere = "";
+                        }
+
+                        Color colore = img.GetPixel(x, y);
+                        int n = colore.R;
+
+                        int[] a = new int[8];
+
+                        for (int z = 0; n > 0; z++)
+                        {
+                            a[z] = n % 2;
+                            n = n / 2;
+                        }
+
+                        carattere = carattere + a[0].ToString();
+                        tutto = tutto + a[0].ToString();
+
+                    }
+                }
+            }
+
+            string risultato0 = "";
+            int l = default(int);
+
+            while (tutto.Length > 0)
+            {
+                var first8 = tutto.Substring(0, 8);
+                tutto = tutto.Substring(8);
+                var num = Convert.ToInt32(first8, 2);
+                risultato0 = risultato0 + (char)num;
+                string k = default(string);
+                k = k + (char)num;
+                if (k == "+")
+                {
+                    l = l + 1;
+                }
+                if (l == 2)
+                    break;
+            }
+            int o = 0;
+            string acaso = default(string);
+            while (o < risultato0.Length - 2)
+            {
+                acaso = acaso + risultato0.Substring(o, 1);
+                o++;
+            }
+            risultato0 = acaso;
+            string risultato = default(string);
+            risultato = Crypto.AESDecryption(risultato0, textBox2.Text);
+
+            textBox1.Text = risultato;
+
+            string phrase = textBox1.Text;
+            string[] words = phrase.Split('/');
+
+            foreach (var word in words)
+            {
+                label4.Text = ($"{word}");
+            }
         }
 
         private void button2_Click_1(object sender, EventArgs e)
