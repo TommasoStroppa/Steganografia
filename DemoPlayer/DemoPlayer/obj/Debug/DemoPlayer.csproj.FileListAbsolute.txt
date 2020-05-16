@@ -81,3 +81,26 @@ C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin
 >>>>>>> playerMajidBrozzoni
 C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\CifraturaDLL.dll
 C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\CifraturaDLL.pdb
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\DemoPlayer.exe.config
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\DemoPlayer.exe
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\DemoPlayer.pdb
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\CifraturaDLL.dll
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\IpMatcher.dll
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\MetroFramework.Design.dll
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\MetroFramework.dll
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\NAudio.dll
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\RegexMatcher.dll
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\WatsonWebserver.dll
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\CifraturaDLL.pdb
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\NAudio.xml
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.csprojAssemblyReference.cache
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.Form1.resources
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.Properties.Resources.resources
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.csproj.GenerateResource.cache
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.csproj.CopyComplete
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.exe
+C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.pdb

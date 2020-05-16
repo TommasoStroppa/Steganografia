@@ -78,7 +78,7 @@ namespace DemoPlayer
             string FileToCopy = null;
             string NewCopy = null;
 
-            FileToCopy = @"C:\Users\zacca\Desktop\Thescotts.mp3";
+            FileToCopy = @"C:\Users\computer\Desktop\Thescotts.mp3";
             NewCopy = System.IO.Path.Combine(Application.StartupPath, System.IO.Path.GetFileName(FileToCopy));
 
 
@@ -142,7 +142,7 @@ namespace DemoPlayer
                 risultato0 = risultato0 + (char)num;
                 string k = default(string);
                 k = k + (char)num;
-                if (k == "+")
+                if (k == "@")
                 {
                     l = l + 1;
                 }

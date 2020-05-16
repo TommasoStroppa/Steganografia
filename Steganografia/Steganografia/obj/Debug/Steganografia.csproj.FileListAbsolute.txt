@@ -31,3 +31,6 @@ C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia
 C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.csproj.CopyComplete
 C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.exe
 C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.pdb
+C:\Users\Asus\Documents\GitHub\Steganografia\Steganografia\Steganografia\bin\Debug\CifraturaDLL.dll
+C:\Users\Asus\Documents\GitHub\Steganografia\Steganografia\Steganografia\bin\Debug\CifraturaDLL.pdb
+C:\Users\Asus\Documents\GitHub\Steganografia\Steganografia\Steganografia\obj\Debug\Steganografia.csproj.CopyComplete
