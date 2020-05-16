@@ -44,6 +44,10 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -205,6 +209,10 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel6.Controls.Add(this.textBox2);
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.textBox1);
             this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.pictureBox1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -235,6 +243,44 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(406, 497);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(190, 22);
+            this.textBox1.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(160, 497);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(190, 22);
+            this.textBox2.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(210, 470);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 24);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Password";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(435, 470);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 24);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Stringa estratta";
             // 
             // Form1
             // 
@@ -278,6 +324,10 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnLeggi;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
