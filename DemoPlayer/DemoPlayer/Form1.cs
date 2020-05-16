@@ -27,6 +27,9 @@ namespace DemoPlayer
 
             s.DynamicRoutes.Add(HttpMethod.GET, new Regex("^/audio/(.*?)/?$"), audioRoute);       }
 
+        string percorso = string.Empty;
+        Bitmap img;
+
         static async Task DefaultRoute(HttpContext ctx)
         {
             ctx.Response.StatusCode = 200;
@@ -100,9 +103,25 @@ namespace DemoPlayer
                 MessageBox.Show("fatto");
             }
         }
-        
 
+        private void btnLeggi_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Multiselect = false;
+            openFileDialog1.Filter = "Bitmap Image (.bmp)|*.bmp";
+            openFileDialog1.InitialDirectory = @"C:\Users\computer\Desktop\";
+            openFileDialog1.Title = "Seleziona immagine BMP";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                percorso = openFileDialog1.FileName;
+                immagine.ImageLocation = percorso;
+            }
+        }
     }
         
 }
