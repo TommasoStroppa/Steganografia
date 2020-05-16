@@ -13,6 +13,7 @@ using NAudio.Wave;
 using WatsonWebserver;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Net;
 
 namespace DemoPlayer
 {
@@ -29,7 +30,7 @@ namespace DemoPlayer
         static async Task DefaultRoute(HttpContext ctx)
         {
             ctx.Response.StatusCode = 200;
-            var audio = System.IO.File.ReadAllBytes("ehi.mp3");
+            var audio = System.IO.File.ReadAllBytes("YouTube.mp3");
             await ctx.Response.Send(audio);
         }
 
@@ -47,7 +48,11 @@ namespace DemoPlayer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string fileName = "YouTube.mp3";
+            //using (var client = new WebClient())
+            //{
+            //    client.DownloadFile("https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.like-agency.it%2Fblog-like%2Fitem%2F72-colori-e-marketing-come-creare-l-immagine-coordinata-perfetta&psig=AOvVaw0vEzE9NhX7ZTdj3rmAna97&ust=1589635366180000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCICL_K37tekCFQAAAAAdAAAAABAD", "audio.jpg");
+            //}
+                string fileName = "YouTube.mp3";
             using (var audioFile = new MediaFoundationReader(fileName))
             using (var outputDevice = new WaveOutEvent())
             {
@@ -95,6 +100,7 @@ namespace DemoPlayer
                 MessageBox.Show("fatto");
             }
         }
+        
 
 
     }
