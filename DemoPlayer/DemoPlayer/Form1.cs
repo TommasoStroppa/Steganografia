@@ -56,6 +56,9 @@ namespace DemoPlayer
        
         private void button2_Click_1(object sender, EventArgs e)
         {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Multiselect = false;
             openFileDialog1.Filter = "Bitmap Image (.bmp)|*.bmp";
@@ -154,27 +157,38 @@ namespace DemoPlayer
             textBox3.Visible = true;
             label5.Visible = true;
         }
+        
 
-        private void button1_Click(object sender, EventArgs e)
+        public void Audio()
         {
             var link = label4.Text;
             var nomeF = textBox3.Text;
             using (var client = new WebClient())
             {
-                client.DownloadFile("http://127.0.0.1:50000/audio/" +link, nomeF + ".mp3");
+                client.DownloadFile("http://127.0.0.1:50000/audio/" + link, nomeF + ".mp3");
             }
-                string fileName = nomeF + ".mp3";
-                using (var audioFile = new MediaFoundationReader(fileName))
-                using (var outputDevice = new WaveOutEvent())
+            string fileName = nomeF + ".mp3";
+            using (var audioFile = new MediaFoundationReader(fileName))
+            using (var outputDevice = new WaveOutEvent())
+            {
+                outputDevice.Init(audioFile);
+                outputDevice.Play();
+                while (outputDevice.PlaybackState == PlaybackState.Playing)
                 {
-                    outputDevice.Init(audioFile);
-                    outputDevice.Play();
-                    while (outputDevice.PlaybackState == PlaybackState.Playing)
-                    {
-                        Thread.Sleep(1000);
-                    }
+                    Thread.Sleep(1000);
                 }
+            }
         }
+        Thread t;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+                t = new Thread(Audio);
+
+                t.Start();
+        }
+
+        
         private void Form1_Load(object sender, EventArgs e)
         {
             textBox1.Visible = false;
@@ -183,6 +197,11 @@ namespace DemoPlayer
             label2.Visible = false;
             label3.Visible = false;
             label5.Visible = false;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            t.Abort();
         }
     }
         
