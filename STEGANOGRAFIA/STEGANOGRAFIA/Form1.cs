@@ -38,6 +38,13 @@ namespace Steganografia
 
         private void scrivi_Click(object sender, EventArgs e)
         {
+            if(password.Text.Length<8)
+            {
+                testo.Text = "";
+                password.Clear();
+                MessageBox.Show("Password non valida! Deve contenere almeno 8 caratteri.");
+                return;
+            }
             string messaggio = string.Empty;
             string da_inserire0 = testo.Text;
             if(string.IsNullOrEmpty(da_inserire0) || string.IsNullOrEmpty(password.Text))
@@ -104,6 +111,7 @@ namespace Steganografia
                 }
                 immagine.Image = img;
                 testo.Text = "";
+                password.Clear();
             }
             else
             {
@@ -123,13 +131,10 @@ namespace Steganografia
             {
                 img.Save(saveFileDialog1.FileName);
             }
-
-            password.Clear();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
             if (!checkBox1.Checked)
             {
                 password.UseSystemPasswordChar = true;
@@ -143,7 +148,6 @@ namespace Steganografia
         private void Form1_Load(object sender, EventArgs e)
         {
             password.UseSystemPasswordChar = true;
-
         }
     }
 }
