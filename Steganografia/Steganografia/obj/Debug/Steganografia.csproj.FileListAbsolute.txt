@@ -43,7 +43,6 @@ C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganograf
 C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.Form1.resources
 C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.Properties.Resources.resources
 C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.csproj.GenerateResource.cache
-C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.csproj.CoreCompileInputs.cache
 C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.csproj.CopyComplete
 C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.exe
 C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\STEGANOGRAFIA\Steganografia\obj\Debug\Steganografia.pdb

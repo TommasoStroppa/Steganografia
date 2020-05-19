@@ -123,9 +123,28 @@ namespace Steganografia
             {
                 img.Save(saveFileDialog1.FileName);
             }
+
+            password.Clear();
         }
 
-        
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (!checkBox1.Checked)
+            {
+                password.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                password.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            password.UseSystemPasswordChar = true;
+
+        }
     }
 }
 

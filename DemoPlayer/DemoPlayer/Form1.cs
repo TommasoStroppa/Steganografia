@@ -45,8 +45,17 @@ namespace DemoPlayer
 
             if (!System.IO.File.Exists(audioName))
             {
-                audioName = "noaudio.jpg";
-                MessageBox.Show("Audio non trovato!");
+                using (var audioFile = new MediaFoundationReader("noAudio.mp3")) 
+                using (var outputDevice = new WaveOutEvent())
+                {
+                    outputDevice.Init(audioFile);
+                    outputDevice.Play();
+                    while (outputDevice.PlaybackState == PlaybackState.Playing)
+                    {
+                        Thread.Sleep(1000);
+                    }
+                }
+                return;
             }
 
             ctx.Response.StatusCode = 200;
@@ -73,7 +82,7 @@ namespace DemoPlayer
             textBox2.Visible = true;
             label2.Visible = true;
             label3.Visible = true;
-            
+            checkBox1.Visible = true;
         }
 
         private void btnLeggi_Click(object sender, EventArgs e)
@@ -145,6 +154,7 @@ namespace DemoPlayer
             string risultato = default(string);
             risultato = Crypto.AESDecryption(risultato0, textBox2.Text);
 
+
             textBox1.Text = risultato;
 
             string phrase = textBox1.Text;
@@ -181,12 +191,13 @@ namespace DemoPlayer
         }
         Thread t;
 
-
+        bool avviato = false;
         private void play_Click(object sender, EventArgs e)
         {
             t = new Thread(Audio);
 
             t.Start();
+            avviato = true;
         }
         
         private void Form1_Load(object sender, EventArgs e)
@@ -197,13 +208,36 @@ namespace DemoPlayer
             label2.Visible = false;
             label3.Visible = false;
             label5.Visible = false;
+            checkBox1.Visible = false;
+
+            textBox2.UseSystemPasswordChar = true;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            t.Abort();
+            if (avviato)
+            {
+                t.Abort();
+            }
+            
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkBox1.Checked)
+            {
+                textBox2.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = false;
+            }
+        }
     }
         
 }
