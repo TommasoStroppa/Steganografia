@@ -181,13 +181,13 @@ namespace DemoPlayer
         }
         Thread t;
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void play_Click(object sender, EventArgs e)
         {
-                t = new Thread(Audio);
+            t = new Thread(Audio);
 
-                t.Start();
+            t.Start();
         }
-
         
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -203,6 +203,7 @@ namespace DemoPlayer
         {
             t.Abort();
         }
+
     }
         
 }
