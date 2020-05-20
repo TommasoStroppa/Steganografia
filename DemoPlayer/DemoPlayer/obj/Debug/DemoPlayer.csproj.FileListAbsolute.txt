@@ -105,3 +105,5 @@ C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\Dem
 C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.exe
 C:\Users\Asus\Documents\GitHub\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.pdb
 C:\Users\zacca\OneDrive\Documenti\GitHub\Steganografia\DemoPlayer\DemoPlayer\obj\Debug\DemoPlayer.csproj.CoreCompileInputs.cache
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\CifraturaDLL.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\DemoPlayer\DemoPlayer\bin\Debug\CifraturaDLL.pdb

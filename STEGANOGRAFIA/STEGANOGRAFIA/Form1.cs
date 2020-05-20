@@ -53,7 +53,7 @@ namespace Steganografia
                 return;
             }
             string da_inserire = default(string);
-            da_inserire=Crypto.AESEncryption(da_inserire0, password.Text) + "@@";
+            da_inserire=Crypto.CifraturaAES(da_inserire0, password.Text) + "@@";
 
             foreach (char c in da_inserire)
             {

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.immagine = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.testo = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.password = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.scrivi = new System.Windows.Forms.Button();
             this.seleziona_file = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.testo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.immagine)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -73,14 +73,29 @@
             this.panel1.TabIndex = 9;
             this.panel1.Visible = false;
             // 
+            // testo
+            // 
+            this.testo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testo.FormattingEnabled = true;
+            this.testo.Items.AddRange(new object[] {
+            "Audio1",
+            "Audio2",
+            "Audio3",
+            "Audio4",
+            "Audio5"});
+            this.testo.Location = new System.Drawing.Point(14, 46);
+            this.testo.Name = "testo";
+            this.testo.Size = new System.Drawing.Size(219, 41);
+            this.testo.TabIndex = 17;
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Source Sans Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.checkBox1.Location = new System.Drawing.Point(397, 84);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(167, 28);
+            this.checkBox1.Size = new System.Drawing.Size(263, 37);
             this.checkBox1.TabIndex = 15;
             this.checkBox1.Text = "Mostra password";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -92,30 +107,30 @@
             this.password.Location = new System.Drawing.Point(397, 46);
             this.password.Margin = new System.Windows.Forms.Padding(2);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(233, 29);
+            this.password.Size = new System.Drawing.Size(233, 39);
             this.password.TabIndex = 16;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Source Sans Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(35, 19);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 24);
+            this.label2.Size = new System.Drawing.Size(281, 33);
             this.label2.TabIndex = 15;
             this.label2.Text = "Nome della canzone";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Source Sans Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(478, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 24);
+            this.label1.Size = new System.Drawing.Size(143, 33);
             this.label1.TabIndex = 14;
             this.label1.Text = "Password";
             // 
@@ -123,7 +138,7 @@
             // 
             this.scrivi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.scrivi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scrivi.Font = new System.Drawing.Font("Source Sans Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scrivi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scrivi.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.scrivi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.scrivi.Location = new System.Drawing.Point(256, 120);
@@ -139,7 +154,7 @@
             this.seleziona_file.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.seleziona_file.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.seleziona_file.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.seleziona_file.Font = new System.Drawing.Font("Source Sans Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seleziona_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seleziona_file.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.seleziona_file.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.seleziona_file.Location = new System.Drawing.Point(36, 458);
@@ -153,29 +168,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Source Sans Pro", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(312, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(300, 60);
+            this.label3.Size = new System.Drawing.Size(488, 82);
             this.label3.TabIndex = 14;
             this.label3.Text = "HideYourData";
             // 
-            // testo
-            // 
-            this.testo.Font = new System.Drawing.Font("Source Sans Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testo.FormattingEnabled = true;
-            this.testo.Items.AddRange(new object[] {
-            "YouTube",
-            "canzone1"});
-            this.testo.Location = new System.Drawing.Point(14, 46);
-            this.testo.Name = "testo";
-            this.testo.Size = new System.Drawing.Size(219, 32);
-            this.testo.TabIndex = 17;
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(915, 642);
@@ -183,7 +186,7 @@
             this.Controls.Add(this.seleziona_file);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.immagine);
-            this.Font = new System.Drawing.Font("Source Sans Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "HIDE YOUR DATA";

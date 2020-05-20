@@ -84,6 +84,10 @@ namespace CifraturaDLL
                     }
                 }
             }
+            catch
+            {
+                testoOriginale = null;
+            }
             finally
             {
                 if (algAES != null)

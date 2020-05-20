@@ -152,7 +152,13 @@ namespace DemoPlayer
             }
             risultato0 = acaso;
             string risultato = default(string);
-            risultato = Crypto.AESDecryption(risultato0, textBox2.Text);
+            risultato = Crypto.DecifraturaAES(risultato0, textBox2.Text);
+            
+            if(risultato==null)
+            {
+                MessageBox.Show("Password errata");
+                return;
+            }
 
 
             textBox1.Text = risultato;
