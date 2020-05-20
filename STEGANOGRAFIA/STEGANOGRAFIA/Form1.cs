@@ -45,6 +45,13 @@ namespace Steganografia
                 MessageBox.Show("Password non valida! Deve contenere almeno 8 caratteri.");
                 return;
             }
+
+            if (testo.Text=="noAudio")
+            {
+                MessageBox.Show("Valore non valido!");
+                return;
+            }
+
             string messaggio = string.Empty;
             string da_inserire0 = testo.Text;
             if(string.IsNullOrEmpty(da_inserire0) || string.IsNullOrEmpty(password.Text))

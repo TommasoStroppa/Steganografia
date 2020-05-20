@@ -97,7 +97,6 @@ namespace DemoPlayer
             {
                 for (int x = 0; x < larghezza; x++)
                 {
-
                     int posizione = larghezza * y + x;
 
                     if (carattere != "00000000")
@@ -225,11 +224,6 @@ namespace DemoPlayer
             {
                 t.Abort();
             }
-            
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
 
         }
 
