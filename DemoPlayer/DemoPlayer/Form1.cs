@@ -238,6 +238,17 @@ namespace DemoPlayer
                 textBox2.UseSystemPasswordChar = false;
             }
         }
+
+        private void aiuto_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Manuale delle istruzioni" +
+                "\nBenvenuto in Steganographic player, ecco i passaggi per il corretto funzionamento dell'applicazione:" +
+                "\n1) Carica immagine (vengono accettate solo immagini bitmap)" +
+                "\n2) Inserire la password" +
+                "\n3) Premere il pulsante leggi" +
+                "\n4) Rinominare eventualmente il nome dell'audio"+
+                "\n5) Premere il pulsante play");
+        }
     }
         
 }

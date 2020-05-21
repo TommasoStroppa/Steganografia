@@ -156,6 +156,16 @@ namespace Steganografia
         {
             password.UseSystemPasswordChar = true;
         }
+
+        private void help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Manuale delle istruzioni" +
+                "\nBenvenuto in HideYourData, ecco i passaggi per il corretto funzionamento dell'applicazione:" +
+                "\n1) Carica immagine (vengono accettate solo immagini bitmap)" +
+                "\n2) Inserire la stringa o selezionare un file audio" +
+                "\n3) Inserire la password" +
+                "\n4) Premere il pulsante scrivi");
+        }
     }
 }
 

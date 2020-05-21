@@ -44,6 +44,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,7 +52,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.immagine = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.help = new System.Windows.Forms.Button();
+            this.aiuto = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -136,6 +138,8 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.panel5.Controls.Add(this.aiuto);
+            this.panel5.Controls.Add(this.help);
             this.panel5.Controls.Add(this.btnLeggi);
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.button2);
@@ -250,6 +254,19 @@
             this.panel6.Size = new System.Drawing.Size(571, 442);
             this.panel6.TabIndex = 3;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.checkBox1.Location = new System.Drawing.Point(115, 409);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(149, 24);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "Mostra password";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -324,18 +341,38 @@
             this.immagine.TabIndex = 0;
             this.immagine.TabStop = false;
             // 
-            // checkBox1
+            // help
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkBox1.Location = new System.Drawing.Point(115, 409);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(149, 24);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Mostra password";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.help.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.help.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.help.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.help.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.help.Location = new System.Drawing.Point(51, 275);
+            this.help.Margin = new System.Windows.Forms.Padding(2);
+            this.help.Name = "help";
+            this.help.Size = new System.Drawing.Size(78, 28);
+            this.help.TabIndex = 16;
+            this.help.Text = "HELP";
+            this.help.UseVisualStyleBackColor = true;
+            // 
+            // aiuto
+            // 
+            this.aiuto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.aiuto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.aiuto.FlatAppearance.BorderSize = 0;
+            this.aiuto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.aiuto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.aiuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aiuto.ForeColor = System.Drawing.Color.White;
+            this.aiuto.Location = new System.Drawing.Point(0, 271);
+            this.aiuto.Margin = new System.Windows.Forms.Padding(2);
+            this.aiuto.Name = "aiuto";
+            this.aiuto.Size = new System.Drawing.Size(172, 49);
+            this.aiuto.TabIndex = 17;
+            this.aiuto.Text = "Help";
+            this.aiuto.UseVisualStyleBackColor = false;
+            this.aiuto.Click += new System.EventHandler(this.aiuto_Click);
             // 
             // Form1
             // 
@@ -391,6 +428,8 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button aiuto;
+        private System.Windows.Forms.Button help;
     }
 }
 
