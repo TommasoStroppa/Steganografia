@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CifraturaDLL;
 
 namespace ConsoleDemoCifratura
 {
@@ -18,7 +19,7 @@ namespace ConsoleDemoCifratura
             Console.Write("Password:");
             string pswd = Console.ReadLine();
 
-            string strEncrypted=CifraturaDLL.Crypto.AESEncryption(strEncryprion, pswd);
+            string strEncrypted=Crypto.CifraturaAES(strEncryprion, pswd);
 
             Console.Write("\nStringa cifrata:");
             Console.WriteLine(strEncrypted);
@@ -28,7 +29,7 @@ namespace ConsoleDemoCifratura
 
             try
             {
-                string strDecrypted = CifraturaDLL.Crypto.AESDecryption(strEncrypted, pswdn);
+                string strDecrypted = Crypto.DecifraturaAES(strEncrypted, pswdn);
                 Console.Write("\nStringa decifrata:");
                 Console.WriteLine(strDecrypted);
 

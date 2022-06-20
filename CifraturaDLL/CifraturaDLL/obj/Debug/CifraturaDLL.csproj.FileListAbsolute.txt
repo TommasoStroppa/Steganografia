@@ -4,3 +4,8 @@ C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\CifraturaDLL\CifraturaDLL\o
 C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\CifraturaDLL\CifraturaDLL\obj\Debug\CifraturaDLL.csproj.CoreCompileInputs.cache
 C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\CifraturaDLL\CifraturaDLL\obj\Debug\CifraturaDLL.dll
 C:\Users\infot\OneDrive\Desktop\GitHub\Steganografia\CifraturaDLL\CifraturaDLL\obj\Debug\CifraturaDLL.pdb
+C:\Users\utente\Documents\GitHub\Steganografia\CifraturaDLL\CifraturaDLL\bin\Debug\CifraturaDLL.dll
+C:\Users\utente\Documents\GitHub\Steganografia\CifraturaDLL\CifraturaDLL\bin\Debug\CifraturaDLL.pdb
+C:\Users\utente\Documents\GitHub\Steganografia\CifraturaDLL\CifraturaDLL\obj\Debug\CifraturaDLL.csproj.CoreCompileInputs.cache
+C:\Users\utente\Documents\GitHub\Steganografia\CifraturaDLL\CifraturaDLL\obj\Debug\CifraturaDLL.dll
+C:\Users\utente\Documents\GitHub\Steganografia\CifraturaDLL\CifraturaDLL\obj\Debug\CifraturaDLL.pdb
